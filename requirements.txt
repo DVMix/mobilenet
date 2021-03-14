@@ -1,0 +1,8 @@
+tqdm
+torch==1.4.0
+torchvision==0.5.0
+opencv-python
+opencv-contrib-python
+opencv-python-headless
+matplotlib
+Pillow==6.1.0
