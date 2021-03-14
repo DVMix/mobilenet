@@ -1,0 +1,11 @@
+FROM nvidia/cuda:10.2-cudnn7-runtime-ubuntu18.04
+RUN apt-get update
+RUN apt-get install -y python3
+RUN apt-get update
+RUN apt-get install -y python3-pip
+RUN apt-get install -y libsm6 libxext6 libxrender-dev
+WORKDIR /app
+COPY requirements.txt /app
+RUN pip3 --no-cache-dir install -r requirements.txt
+COPY . /app
+CMD ./test.sh
